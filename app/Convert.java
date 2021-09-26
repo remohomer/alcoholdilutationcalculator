@@ -8,7 +8,7 @@ public class Convert {
     public Unit destinyUnit;
     public Fluid fluid;
 
-    Ingredient ingredientEtanol = new Ingredient("Etanol", 1.5152);
+    Ingredient ingredientEtanol = new Ingredient("Etanol", 0.66);
     Ingredient ingredientWater = new Ingredient("Woda", 1);
     Ingredient ingredientEmpty = new Ingredient("Empty", 1);
 
