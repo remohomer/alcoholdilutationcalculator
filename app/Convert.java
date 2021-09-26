@@ -22,25 +22,25 @@ public class Convert {
         double result;
         if (fluid.getType() == Type.ALCOHOL) {
             if (fluid.getUnit().isWeight() && !destinyUnit.isWeight()) {
-                result = ((fluid.getValue() / ingredientEtanol.getVolumeOfOneKilogram()) * fluid.getUnit().getValue()) / destinyUnit.getValue();
+                result = ((fluid.getValue() / ingredientEtanol.getVolumeToWeightRatio()) * fluid.getUnit().getValue()) / destinyUnit.getValue();
             } else if (!fluid.getUnit().isWeight() && destinyUnit.isWeight()) {
-                result = ((fluid.getValue() * ingredientEtanol.getVolumeOfOneKilogram()) * fluid.getUnit().getValue()) / destinyUnit.getValue();
+                result = ((fluid.getValue() * ingredientEtanol.getVolumeToWeightRatio()) * fluid.getUnit().getValue()) / destinyUnit.getValue();
             } else {
                 result = (fluid.getValue() * fluid.getUnit().getValue()) / destinyUnit.getValue();
             }
         } else if (fluid.getType() == Type.WATER) {
             if (fluid.getUnit().isWeight() && !destinyUnit.isWeight()) {
-                result = ((fluid.getValue() / ingredientWater.getVolumeOfOneKilogram()) * fluid.getUnit().getValue()) / destinyUnit.getValue();
+                result = ((fluid.getValue() / ingredientWater.getVolumeToWeightRatio()) * fluid.getUnit().getValue()) / destinyUnit.getValue();
             } else if (!fluid.getUnit().isWeight() && destinyUnit.isWeight()) {
-                result = ((fluid.getValue() * ingredientWater.getVolumeOfOneKilogram()) * fluid.getUnit().getValue()) / destinyUnit.getValue();
+                result = ((fluid.getValue() * ingredientWater.getVolumeToWeightRatio()) * fluid.getUnit().getValue()) / destinyUnit.getValue();
             } else {
                 result = (fluid.getValue() * fluid.getUnit().getValue()) / destinyUnit.getValue();
             }
         } else if (fluid.getType() == Type.SOLUTION) {
             if (fluid.getUnit().isWeight() && !destinyUnit.isWeight()) {
-                result = ((fluid.getValue() / ingredientEmpty.getVolumeOfOneKilogram()) * fluid.getUnit().getValue()) / destinyUnit.getValue();
+                result = ((fluid.getValue() / ingredientEmpty.getVolumeToWeightRatio()) * fluid.getUnit().getValue()) / destinyUnit.getValue();
             } else if (!fluid.getUnit().isWeight() && destinyUnit.isWeight()) {
-                result = ((fluid.getValue() * ingredientEmpty.getVolumeOfOneKilogram()) * fluid.getUnit().getValue()) / destinyUnit.getValue();
+                result = ((fluid.getValue() * ingredientEmpty.getVolumeToWeightRatio()) * fluid.getUnit().getValue()) / destinyUnit.getValue();
             } else {
                 result = (fluid.getValue() * fluid.getUnit().getValue()) / destinyUnit.getValue();
             }

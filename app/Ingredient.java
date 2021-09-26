@@ -2,18 +2,18 @@ package app;
 
 public class Ingredient {
     private final String name;
-    private final double volumeOfOneKilogram;
+    private final double volumeToWeightRatio;
 
-    Ingredient(String name, double volumeOfOneKilogram) {
+    Ingredient(String name, double volumeToWeightRatio) {
         this.name = name;
-        this.volumeOfOneKilogram = volumeOfOneKilogram;
+        this.volumeToWeightRatio = volumeToWeightRatio;
     }
 
     public String getName() {
         return name;
     }
 
-    public double getVolumeOfOneKilogram() {
-        return volumeOfOneKilogram;
+    public double getVolumeToWeightRatio() {
+        return volumeToWeightRatio;
     }
 }
