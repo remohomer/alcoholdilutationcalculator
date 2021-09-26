@@ -1,14 +1,27 @@
 package app;
 
 public enum Unit {
-    GRAM("Gramy", 1, true),
-    KILOGRAM("Kilogramy", 1000, true),
-    MILILITR("Mililitry", 1, false),
-    LITR("Litry", 1000, false),
-    GLASS("Szklanki", 250, false),
-    SPOON("Łyżki", 15, false),
-    TEASPOON("Łyżeczki", 5, false),
-    NULL("Brak", -1, false);
+    GRAM("Gramy",1,true),
+    DEKAGRAM("Dekagramy",10,true),
+    KILOGRAM("Kilogramy",1000,true),
+    GR("Grany",0.065,true),
+    DR("Dramy",1.78,true),
+    OZ("Uncje",28.34952981,true),
+    LB("Funty",453.59237,true),
+
+    MILILITR("Mililitry",1,false),
+    LITR("Litry",1000,false),
+    OZ_F("Uncje płynu",28.41,false),
+    PT("Pinty",568.26,false),
+    QT("Kwarty",1136,false),
+    GAL("Galony",4546.09,false),
+
+    GLASS("Szklanki",250,false),
+    SPOON("Łyżki",15,false),
+    TEASPOON("Łyżeczki",5,false),
+    PINCH("Szczypty",0.5,false),
+
+    NULL("Brak",-1,false);
 
     private final String name;
     private final double value;
